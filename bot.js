@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { 
     Client, 
     GatewayIntentBits, 
@@ -317,6 +319,6 @@ process.on('SIGINT', () => {
 });
 
 
-client.login('MTM4Mzk3OTA2NzI1MDA1MzIwMA.GvOHyQ.kcyKLm44U13u60Vr9gry0ULiKPJ2jk8da4MwAM');
+client.login(process.env.DISCORD_TOKEN);
 
 module.exports = { client, database };
